@@ -1,0 +1,26 @@
+{
+  "name": "get_gov_data",
+  "version": "1.0.0",
+  "description": "to get government data for subject stat for application by 5910500147",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "npm run build && node hello.js",
+    "format": "prettier --write \"*.ts\" \"*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add .",
+    "postversion": "git push && git push --tags"
+  },
+  "author": "Supakorn Wongsawang",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^1.17.1",
+    "tslint": "^5.16.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.5"
+  }
+}
