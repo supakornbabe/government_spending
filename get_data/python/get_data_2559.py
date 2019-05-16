@@ -1,5 +1,6 @@
 import requests
 import json
+import sys
 
 token = "7a943a4ff8ceca7b0b37c1e23c57d32f"
 start = 0
@@ -24,6 +25,7 @@ def get_with_offset(offset, file):
         print(json.dumps(i, ensure_ascii=False), file=file)
     if len(data['result']) < 20:
         print("Year " + str(year)+" finish")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
