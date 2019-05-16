@@ -3,4 +3,4 @@ function hello(person: string) {
 }
 
 let user = 'babe';
-// console.log(hello(user));
+console.log(hello(user));
