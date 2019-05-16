@@ -3,8 +3,8 @@ import json
 
 token = "402751371d8d559f36046d26b9f964d8"
 start = 0
-stop = 10000
-year = 2559
+stop = 100000
+year = 2561
 url = "https://govspendingapi.data.go.th/api/service/bbgfproject"
 
 
