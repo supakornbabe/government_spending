@@ -1,0 +1,1 @@
+nohup python3 -u get_data_2562.py > 2562.log &
