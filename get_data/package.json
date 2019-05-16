@@ -1,12 +1,12 @@
 {
   "name": "get_gov_data",
   "version": "1.0.0",
-  "description": "to get government data for subject stat for application by 5910500147",
+  "description": "To get government data for subject stat for application by 5910500147",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "npm run build && node hello.js",
+    "start": "npm run build && node index.js",
     "format": "prettier --write \"*.ts\" \"*.js\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
