@@ -2,9 +2,9 @@ import requests
 import json
 import sys
 
-token = "7a943a4ff8ceca7b0b37c1e23c57d32f"
-start = 0
-stop = 100000
+token = "402751371d8d559f36046d26b9f964d8"
+start = 6640
+stop = 1000000
 year = 2559
 url = "https://govspendingapi.data.go.th/api/service/bbgfproject"
 
@@ -16,7 +16,7 @@ def get_with_offset(offset, file):
         'offset': offset,
         'user_token': token,
         'year': year,
-        'prov_code': '03100000'
+        # 'prov_code': '03100000'
     }
 
     res = requests.get(url, params)
