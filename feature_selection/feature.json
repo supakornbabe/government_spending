@@ -1,0 +1,254 @@
+[
+    {
+        "agc" : "กรมส่งเสริมการปกครองท้องถิ่น", 
+        "bb_year" : "2559", 
+        "sumgf_amount_sum" : 205483799047.77, 
+        "countgf_amount_sum" : 5657.0, 
+        "averagegf_amount_sum" : 36323811.039025985
+    }, 
+    {
+        "agc" : "กรมการปกครอง", 
+        "bb_year" : "2559", 
+        "sumgf_amount_sum" : 12527254139.53, 
+        "countgf_amount_sum" : 139.0, 
+        "averagegf_amount_sum" : 90124130.50021583
+    }, 
+    {
+        "agc" : "กรุงเทพมหานคร", 
+        "bb_year" : "2559", 
+        "sumgf_amount_sum" : 15906775000.0, 
+        "countgf_amount_sum" : 32.0, 
+        "averagegf_amount_sum" : 497086718.75
+    }, 
+    {
+        "agc" : "กรมที่ดิน", 
+        "bb_year" : "2559", 
+        "sumgf_amount_sum" : 5330886684.74, 
+        "countgf_amount_sum" : 101.0, 
+        "averagegf_amount_sum" : 52781056.28455445
+    }, 
+    {
+        "agc" : "กรมการพัฒนาชุมชน", 
+        "bb_year" : "2559", 
+        "sumgf_amount_sum" : 4958611948.129999, 
+        "countgf_amount_sum" : 23.0, 
+        "averagegf_amount_sum" : 215591823.8317391
+    }, 
+    {
+        "agc" : "กรมป้องกันและบรรเทาสาธารณภัย", 
+        "bb_year" : "2559", 
+        "sumgf_amount_sum" : 2772092834.87, 
+        "countgf_amount_sum" : 48.0, 
+        "averagegf_amount_sum" : 57751934.05979166
+    }, 
+    {
+        "agc" : "เมืองพัทยา", 
+        "bb_year" : "2559", 
+        "sumgf_amount_sum" : 717466421.0, 
+        "countgf_amount_sum" : 31.0, 
+        "averagegf_amount_sum" : 23144078.096774194
+    }, 
+    {
+        "agc" : "กรมโยธาธิการและผังเมือง", 
+        "bb_year" : "2559", 
+        "sumgf_amount_sum" : 17915680812.54, 
+        "countgf_amount_sum" : 1378.0, 
+        "averagegf_amount_sum" : 13001219.74785196
+    }, 
+    {
+        "agc" : "สนง.ปลัดกระทรวงมหาดไทย", 
+        "bb_year" : "2559", 
+        "sumgf_amount_sum" : 4257811158.0899997, 
+        "countgf_amount_sum" : 71.0, 
+        "averagegf_amount_sum" : 59969171.24070422
+    }, 
+    {
+        "agc" : "กรมส่งเสริมการปกครองท้องถิ่น", 
+        "bb_year" : "2560", 
+        "sumgf_amount_sum" : 220196673044.51996, 
+        "countgf_amount_sum" : 6623.0, 
+        "averagegf_amount_sum" : 33247270.57897025
+    }, 
+    {
+        "agc" : "กรุงเทพมหานคร", 
+        "bb_year" : "2560", 
+        "sumgf_amount_sum" : 17792031947.27, 
+        "countgf_amount_sum" : 47.0, 
+        "averagegf_amount_sum" : 378553871.2185106
+    }, 
+    {
+        "agc" : "กรมการปกครอง", 
+        "bb_year" : "2560", 
+        "sumgf_amount_sum" : 37553973833.71003, 
+        "countgf_amount_sum" : 512.0, 
+        "averagegf_amount_sum" : 73347605.1439649
+    }, 
+    {
+        "agc" : "กรมการพัฒนาชุมชน", 
+        "bb_year" : "2560", 
+        "sumgf_amount_sum" : 5633960020.2699995, 
+        "countgf_amount_sum" : 196.0, 
+        "averagegf_amount_sum" : 28744693.980969384
+    }, 
+    {
+        "agc" : "กรมที่ดิน", 
+        "bb_year" : "2560", 
+        "sumgf_amount_sum" : 5548464919.770008, 
+        "countgf_amount_sum" : 329.0, 
+        "averagegf_amount_sum" : 16864635.014498506
+    }, 
+    {
+        "agc" : "สำนักงานปลัดกระทรวงมหาดไทย", 
+        "bb_year" : "2560", 
+        "sumgf_amount_sum" : 3981188012.280001, 
+        "countgf_amount_sum" : 514.0, 
+        "averagegf_amount_sum" : 7745501.969416345
+    }, 
+    {
+        "agc" : "กรมป้องกันและบรรเทาสาธารณภัย", 
+        "bb_year" : "2560", 
+        "sumgf_amount_sum" : 2794744938.7599998, 
+        "countgf_amount_sum" : 188.0, 
+        "averagegf_amount_sum" : 14865664.56787234
+    }, 
+    {
+        "agc" : "กรมโยธาธิการและผังเมือง", 
+        "bb_year" : "2560", 
+        "sumgf_amount_sum" : 17458889271.349995, 
+        "countgf_amount_sum" : 1577.0, 
+        "averagegf_amount_sum" : 11070950.711065311
+    }, 
+    {
+        "agc" : "เมืองพัทยา", 
+        "bb_year" : "2560", 
+        "sumgf_amount_sum" : 1101617587.5, 
+        "countgf_amount_sum" : 43.0, 
+        "averagegf_amount_sum" : 25619013.662790697
+    }, 
+    {
+        "agc" : "กรมส่งเสริมการปกครองท้องถิ่น", 
+        "bb_year" : "2561", 
+        "sumgf_amount_sum" : 232832523419.74966, 
+        "countgf_amount_sum" : 7773.0, 
+        "averagegf_amount_sum" : 29954010.47468798
+    }, 
+    {
+        "agc" : "สำนักงานปลัดกระทรวงมหาดไทย", 
+        "bb_year" : "2561", 
+        "sumgf_amount_sum" : 3828790698.7199993, 
+        "countgf_amount_sum" : 598.0, 
+        "averagegf_amount_sum" : 6402660.031304346
+    }, 
+    {
+        "agc" : "กรมการปกครอง", 
+        "bb_year" : "2561", 
+        "sumgf_amount_sum" : 39220897887.729996, 
+        "countgf_amount_sum" : 433.0, 
+        "averagegf_amount_sum" : 90579440.84926096
+    }, 
+    {
+        "agc" : "กรมการพัฒนาชุมชน", 
+        "bb_year" : "2561", 
+        "sumgf_amount_sum" : 9634887533.71, 
+        "countgf_amount_sum" : 225.0, 
+        "averagegf_amount_sum" : 42821722.372044444
+    }, 
+    {
+        "agc" : "กรุงเทพมหานคร", 
+        "bb_year" : "2561", 
+        "sumgf_amount_sum" : 17206131969.52, 
+        "countgf_amount_sum" : 59.0, 
+        "averagegf_amount_sum" : 291629355.4155932
+    }, 
+    {
+        "agc" : "กรมที่ดิน", 
+        "bb_year" : "2561", 
+        "sumgf_amount_sum" : 5742277700.819997, 
+        "countgf_amount_sum" : 457.0, 
+        "averagegf_amount_sum" : 12565159.082757104
+    }, 
+    {
+        "agc" : "เมืองพัทยา", 
+        "bb_year" : "2561", 
+        "sumgf_amount_sum" : 726248288.0, 
+        "countgf_amount_sum" : 44.0, 
+        "averagegf_amount_sum" : 16505642.909090908
+    }, 
+    {
+        "agc" : "กรมโยธาธิการและผังเมือง", 
+        "bb_year" : "2561", 
+        "sumgf_amount_sum" : 17509567788.67, 
+        "countgf_amount_sum" : 1561.0, 
+        "averagegf_amount_sum" : 11216891.600685457
+    }, 
+    {
+        "agc" : "กรมป้องกันและบรรเทาสาธารณภัย", 
+        "bb_year" : "2561", 
+        "sumgf_amount_sum" : 2849280877.1, 
+        "countgf_amount_sum" : 198.0, 
+        "averagegf_amount_sum" : 14390307.46010101
+    }, 
+    {
+        "agc" : "กรมส่งเสริมการปกครองท้องถิ่น", 
+        "bb_year" : "2562", 
+        "sumgf_amount_sum" : 189499068609.89017, 
+        "countgf_amount_sum" : 8009.0, 
+        "averagegf_amount_sum" : 23660765.215368982
+    }, 
+    {
+        "agc" : "กรุงเทพมหานคร", 
+        "bb_year" : "2562", 
+        "sumgf_amount_sum" : 12325161534.4, 
+        "countgf_amount_sum" : 48.0, 
+        "averagegf_amount_sum" : 256774198.63333333
+    }, 
+    {
+        "agc" : "กรมการปกครอง", 
+        "bb_year" : "2562", 
+        "sumgf_amount_sum" : 23519563173.61999, 
+        "countgf_amount_sum" : 2352.0, 
+        "averagegf_amount_sum" : 9999814.274498295
+    }, 
+    {
+        "agc" : "กรมการพัฒนาชุมชน", 
+        "bb_year" : "2562", 
+        "sumgf_amount_sum" : 3825141092.549999, 
+        "countgf_amount_sum" : 131.0, 
+        "averagegf_amount_sum" : 29199550.324809153
+    }, 
+    {
+        "agc" : "กรมโยธาธิการและผังเมือง", 
+        "bb_year" : "2562", 
+        "sumgf_amount_sum" : 8282276188.629997, 
+        "countgf_amount_sum" : 1449.0, 
+        "averagegf_amount_sum" : 5715856.58290545
+    }, 
+    {
+        "agc" : "กรมที่ดิน", 
+        "bb_year" : "2562", 
+        "sumgf_amount_sum" : 3205269526.2000003, 
+        "countgf_amount_sum" : 336.0, 
+        "averagegf_amount_sum" : 9539492.637500001
+    }, 
+    {
+        "agc" : "กรมป้องกันและบรรเทาสาธารณภัย", 
+        "bb_year" : "2562", 
+        "sumgf_amount_sum" : 1995349479.8700006, 
+        "countgf_amount_sum" : 150.0, 
+        "averagegf_amount_sum" : 13302329.865800004
+    }, 
+    {
+        "agc" : "สำนักงานปลัดกระทรวงมหาดไทย", 
+        "bb_year" : "2562", 
+        "sumgf_amount_sum" : 2345600874.2599998, 
+        "countgf_amount_sum" : 624.0, 
+        "averagegf_amount_sum" : 3758975.760032051
+    }, 
+    {
+        "agc" : "เมืองพัทยา", 
+        "bb_year" : "2562", 
+        "sumgf_amount_sum" : 502852600.0, 
+        "countgf_amount_sum" : 41.0, 
+        "averagegf_amount_sum" : 12264697.56097561
+    }
+]

@@ -1,0 +1,6 @@
+node_modules
+BAK/*
+/time_series/part1/*
+/time_series/part2/*
+/time_series/part3/*
+.vscode
