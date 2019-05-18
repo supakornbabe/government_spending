@@ -31,6 +31,7 @@ def get_with_offset(offset, file):
 if __name__ == "__main__":
     for i in range(start, stop+1, 20):
         filename = '../data/'+str(year)+'/'+str(i)+'.json'
-        f = open(filename, 'w')
-        print(i)
-        get_with_offset(i, f)
+        with open(filename,'w') as f:
+            # f = open(filename, 'w')
+            print(i)
+            get_with_offset(i, f)
