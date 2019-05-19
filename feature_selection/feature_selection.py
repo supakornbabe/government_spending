@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 import os
 try:
-    os.chdir(os.path.join(os.getcwd(), 'feature_selection'))
+    os.chdir(os.path.join(os.getcwd(), '../feature_selection'))
     print(os.getcwd())
 except:
     pass
@@ -30,7 +30,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 # %%
-orig_df = pd.read_csv("feature.csv")
+orig_df = pd.read_csv("feature_without_outlier.csv")
 orig_df.head()
 
 # %%
@@ -39,8 +39,9 @@ orig_df.columns
 # %%
 orig_df.shape
 
-# %%
+# %% CANNOT run this code
 df = orig_df.dropna()
+df.head(100)
 X = df[['Year', 'Department_of_Local_Administration',
         'Department_of_Provincial_Administration', 'Bangkok',
         'Department_of_Lands', 'Community_Development_Department',
@@ -69,13 +70,52 @@ df.isnull().sum()
 # find missing value percent
 null_percent = df.isnull().sum()/len(df)*100
 null_percent
+# %%
+# Replace missing values
+
+new_df = df
+new_df['Department_of_Lands'].fillna(df['Department_of_Lands'].mode()[
+                                     0], inplace=True)  # replace with mode
+new_df['Community_Development_Department'].fillna(
+    df['Community_Development_Department'].mode()[0], inplace=True)  # replace with mode
+new_df['Department_of_Disaster_Prevention_and_Mitigation'].fillna(
+    df['Department_of_Disaster_Prevention_and_Mitigation'].mode()[0], inplace=True)  # replace with mode
+new_df['Pattaya'].fillna(df['Pattaya'].mode()[0],
+                         inplace=True)  # replace with mode
+new_df['Department_of_Public_Works_and_Town_&_Country_Planning'].fillna(
+    df['Department_of_Public_Works_and_Town_&_Country_Planning'].mode()[0], inplace=True)  # replace with mode
+new_df['Office_of_the_Permanent_Secretary_for_Interior'].fillna(
+    df['Office_of_the_Permanent_Secretary_for_Interior'].mode()[0], inplace=True)  # replace with mode
+new_df.shape
+# %%
+# after replacing missing values, re-check %missing data
+new_df.isnull().sum()/len(new_df)*100
+new_df.head()
+# %%
+df = new_df.dropna()
+df.head()
+X = df[['Year', 'Department_of_Local_Administration',
+        'Department_of_Provincial_Administration', 'Bangkok',
+        'Department_of_Lands', 'Community_Development_Department',
+        'Department_of_Disaster_Prevention_and_Mitigation', 'Pattaya',
+        'Department_of_Public_Works_and_Town_&_Country_Planning',
+        'Office_of_the_Permanent_Secretary_for_Interior']]
+y = df.Usage
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=99)
+lm = LinearRegression()
+lm.fit(X_train, y_train)
+y_pred = lm.predict(X_test)
+[np.sqrt(metrics.mean_squared_error(y_test, y_pred)),
+ metrics.r2_score(y_test, y_pred)]
+orig_df_solved_na = new_df
 ######################################################################################################
 # %% [markdown]
 # Low Variance Filtering
 
 # %%
 # compute variances of numerical data columns
-df = orig_df
+df = orig_df_solved_na
 df.var()
 
 # Item_Visibility has lower variance, compared to other variables
@@ -124,24 +164,23 @@ y_pred = lm.predict(X_test)
 
 # %%
 # plot correlation of numerical data
-df = orig_df
+df = orig_df_solved_na
 sns.heatmap(df.corr())
-
-# %%
 df.corr()
 
 # %%
-# since Department_of_Lands and Department_of_Disaster_Prevention_and_Mitigation have high correlation, drop dependent variables
-new_df = df.drop('Department_of_Disaster_Prevention_and_Mitigation', 1)
+# since Department_of_Local_Administration	 and Usage have high correlation, drop dependent variables
+new_df = df.drop('Usage', 1)
 new_df.shape
 sns.heatmap(new_df.corr())
+new_df.corr()
 ######################################################################################################
 
 # %% [markdown]
 # Random Forest
 
 # %%
-df = orig_df.drop('Usage', 1)  # drop target variables
+df = orig_df_solved_na.drop('Usage', 1)  # drop target variables
 df.head()
 
 # %%
@@ -176,12 +215,12 @@ plt.show()
 
 # %%
 new_variables = [
+    'Year',
     'Department_of_Provincial_Administration',
     'Bangkok',
     'Department_of_Lands',
     'Community_Development_Department',
     'Department_of_Disaster_Prevention_and_Mitigation',
-    'Pattaya',
     'Department_of_Public_Works_and_Town_&_Country_Planning',
     'Office_of_the_Permanent_Secretary_for_Interior',
 ]
@@ -201,7 +240,7 @@ y_pred = lm.predict(X_test)
 # Backward Feature Elimination
 
 # %%
-n_features = 5 # define by yourself to select important features
+n_features = 2  # define by yourself to select important features
 df = temp_df  # df that changes from categorical data to numerical data
 rfe = RFE(LinearRegression(), n_features)
 result = rfe.fit(df, orig_df.Usage)
@@ -241,7 +280,7 @@ ffs = f_regression(df, orig_df.Usage)
 ffs
 
 # %%
-f_value_threshold = 2 # set yourself to adjust
+f_value_threshold = 8  # set yourself to adjust
 new_variables = []
 for i in range(0, len(df.columns)-1):
     if ffs[0][i] >= f_value_threshold:
@@ -259,6 +298,6 @@ lm.fit(X_train, y_train)
 y_pred = lm.predict(X_test)
 
 print([np.sqrt(metrics.mean_squared_error(y_test, y_pred)),
- metrics.r2_score(y_test, y_pred)])
+       metrics.r2_score(y_test, y_pred)])
 
 print("USE THIS TEST TO CUT FEATURE AND USE WITH REGRESSION")

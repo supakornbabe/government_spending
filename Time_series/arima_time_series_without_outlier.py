@@ -7,7 +7,7 @@ from statsmodels.tsa.stattools import adfuller
 from statsmodels.tsa.seasonal import seasonal_decompose
 import os
 try:
-    os.chdir(os.path.join(os.getcwd(), './time_series'))
+    os.chdir(os.path.join(os.getcwd(), '../time_series'))
     print(os.getcwd())
 except:
     pass
@@ -26,7 +26,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 # %%
-df = pd.read_csv('gov_use_month.csv')
+df = pd.read_csv('gov_use_month_without_outlier.csv')
 df.head()
 df.tail()
 
@@ -41,8 +41,7 @@ df.set_index('Month', inplace=True)
 
 # %%
 df.head()
-
-
+df = df.dropna()
 # %%
 df.plot()
 
@@ -187,7 +186,7 @@ results.resid.plot(kind='kde')
 
 
 # %%
-df['forecast'] = results.predict(start=150, end=167, dynamic=True)
+df['forecast'] = results.predict(start=128, end=152, dynamic=True)
 df[['Use', 'forecast']].plot(figsize=(12, 8))
 
 
@@ -207,6 +206,6 @@ future_df.head()
 
 
 # %%
-future_df['forecast'] = results.predict(start=167, end=191, dynamic=True)
+future_df['forecast'] = results.predict(start=152, end=172, dynamic=True)
 future_df[['Use', 'forecast']].plot(figsize=(12, 8))
 future_df.tail(50)
