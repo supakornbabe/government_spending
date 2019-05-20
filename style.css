@@ -899,26 +899,6 @@ text.highcharts-drilldown-data-label,
     stroke-width: 1px;
 }
 
-/* #budgetAndUsage {
-    min-width: 310px;
-    max-width: 800px;
-    height: 400px;
-    margin: 0 auto
-}
-
-#pie {
-    min-width: 320px;
-    max-width: 800px;
-    height: 400px;
-    margin: 0 auto;
-}
-
-#bar {
-    min-width: 320px;
-    max-width: 800px;
-    height: 400px;
-    margin: 0 auto;
-} */
 .indexChart {
     min-width: 320px;
     max-width: 1500px;
@@ -953,29 +933,19 @@ body {
 #chartBox {
     width: 100%;
     height: 93%;
-    /* border: 3px solid green; */
-    /* text-align: center; */
 }
 
 #chartPieBox {
     width: 100%;
     height: 90%;
-    /* border: 3px solid green; */
-    /* text-align: center; */
 }
 
 #yearButton {
     margin: auto;
     width: 50%;
-    /* border: 3px solid green; */
     text-align: center;
 }
 
 #yearButton p {
     display: inline
 }
-
-/* 
-.mdc-button--unelevated {
-    color: #000000
-} */
