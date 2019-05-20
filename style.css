@@ -908,7 +908,7 @@ text.highcharts-drilldown-data-label,
 }
 
 .chart {
-    margin: 0 0 0 0;
+    /* margin: 0 0 0 0; */
     width: 100%;
     height: 100%;
 }
@@ -937,7 +937,7 @@ body {
 
 #chartPieBox {
     width: 100%;
-    height: 90%;
+    height: 87%;
 }
 
 #yearButton {
