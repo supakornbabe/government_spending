@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 import os
 try:
-    os.chdir(os.path.join(os.getcwd(), '../feature_selection'))
+    os.chdir(os.path.join(os.getcwd(), './feature_selection'))
     print(os.getcwd())
 except:
     pass
@@ -39,15 +39,13 @@ orig_df.columns
 # %%
 orig_df.shape
 
-# %% CANNOT run this code
-df = orig_df.dropna()
-df.head(100)
-X = df[['Year', 'Department_of_Local_Administration',
-        'Department_of_Provincial_Administration', 'Bangkok',
-        'Department_of_Lands', 'Community_Development_Department',
-        'Department_of_Disaster_Prevention_and_Mitigation', 'Pattaya',
-        'Department_of_Public_Works_and_Town_&_Country_Planning',
-        'Office_of_the_Permanent_Secretary_for_Interior']]
+# %% Remove variable have > 20% of missing values
+df = orig_df.dropna(1)
+df.head()
+X = df[[
+    'Year', 'Department_of_Local_Administration',
+    'Department_of_Provincial_Administration', 'Bangkok'
+]]
 y = df.Usage
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, random_state=99)
@@ -74,24 +72,23 @@ null_percent
 # Replace missing values
 
 new_df = df
-new_df['Department_of_Lands'].fillna(df['Department_of_Lands'].mode()[
-                                     0], inplace=True)  # replace with mode
+new_df['Department_of_Lands'].fillna(
+    df['Department_of_Lands'].median(), inplace=True)  # replace with mode
 new_df['Community_Development_Department'].fillna(
-    df['Community_Development_Department'].mode()[0], inplace=True)  # replace with mode
+    df['Community_Development_Department'].median(), inplace=True)  # replace with mode
 new_df['Department_of_Disaster_Prevention_and_Mitigation'].fillna(
-    df['Department_of_Disaster_Prevention_and_Mitigation'].mode()[0], inplace=True)  # replace with mode
-new_df['Pattaya'].fillna(df['Pattaya'].mode()[0],
+    df['Department_of_Disaster_Prevention_and_Mitigation'].median(), inplace=True)  # replace with mode
+new_df['Pattaya'].fillna(df['Pattaya'].median(),
                          inplace=True)  # replace with mode
 new_df['Department_of_Public_Works_and_Town_&_Country_Planning'].fillna(
-    df['Department_of_Public_Works_and_Town_&_Country_Planning'].mode()[0], inplace=True)  # replace with mode
+    df['Department_of_Public_Works_and_Town_&_Country_Planning'].median(), inplace=True)  # replace with mode
 new_df['Office_of_the_Permanent_Secretary_for_Interior'].fillna(
-    df['Office_of_the_Permanent_Secretary_for_Interior'].mode()[0], inplace=True)  # replace with mode
+    df['Office_of_the_Permanent_Secretary_for_Interior'].median(), inplace=True)  # replace with mode
 new_df.shape
 # %%
 # after replacing missing values, re-check %missing data
 new_df.isnull().sum()/len(new_df)*100
 new_df.head()
-# %%
 df = new_df.dropna()
 df.head()
 X = df[['Year', 'Department_of_Local_Administration',
@@ -108,7 +105,9 @@ lm.fit(X_train, y_train)
 y_pred = lm.predict(X_test)
 [np.sqrt(metrics.mean_squared_error(y_test, y_pred)),
  metrics.r2_score(y_test, y_pred)]
+# %%
 orig_df_solved_na = new_df
+
 ######################################################################################################
 # %% [markdown]
 # Low Variance Filtering
@@ -170,10 +169,31 @@ df.corr()
 
 # %%
 # since Department_of_Local_Administration	 and Usage have high correlation, drop dependent variables
-new_df = df.drop('Usage', 1)
+# new_df = df.drop('Usage', 1)
 new_df.shape
 sns.heatmap(new_df.corr())
 new_df.corr()
+new_variables = [
+    'Year',
+    'Department_of_Provincial_Administration',
+    'Bangkok',
+    'Department_of_Lands',
+    'Community_Development_Department',
+    'Department_of_Disaster_Prevention_and_Mitigation',
+    'Department_of_Public_Works_and_Town_&_Country_Planning',
+    'Office_of_the_Permanent_Secretary_for_Interior',
+]
+temp_df2 = temp_df[new_variables].dropna()
+X = temp_df2
+y = orig_df['Usage'].dropna()
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=99)
+lm = LinearRegression()
+lm.fit(X_train, y_train)
+y_pred = lm.predict(X_test)
+#%%
+print([np.sqrt(metrics.mean_squared_error(y_test, y_pred)),
+ metrics.r2_score(y_test, y_pred)])
 ######################################################################################################
 
 # %% [markdown]
