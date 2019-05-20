@@ -52,7 +52,7 @@ decomposition = seasonal_decompose(df['Use'], freq=12)
 fig = plt.figure()
 fig = decomposition.plot()
 fig.set_size_inches(15, 8)
-fig.savefig('decompose.png')
+# fig.savefig('decompose.png')
 
 
 # %%
@@ -102,8 +102,8 @@ check_adfuller(df['Second Difference'].dropna())
 df['Seasonal Difference'] = df['Use'] - \
     df['Use'].shift(12)
 df['Seasonal Difference'].plot()
-forSave = Fdiff.get_figure()
-forSave.savefig('Seasondif.png')
+# forSave = Fdiff.get_figure()
+# forSave.savefig('Seasondif.png')
 
 # %%
 check_adfuller(df['Seasonal Difference'].dropna())
@@ -113,7 +113,7 @@ check_adfuller(df['Seasonal Difference'].dropna())
 df['Seasonal First Difference'] = df['First Difference'] - \
     df['First Difference'].shift(12)
 df['Seasonal First Difference'].plot()
-df['Seasonal First Difference'].plot().get_figure().savefig('Season1dif.png')
+# df['Seasonal First Difference'].plot().get_figure().savefig('Season1dif.png')
 
 # %%
 check_adfuller(df['Seasonal First Difference'].dropna())
@@ -124,22 +124,22 @@ check_adfuller(df['Seasonal First Difference'].dropna())
 
 # %%
 fig_first_acf = plot_acf(df["First Difference"].dropna())
-fig_first_acf.savefig('acf1.png')
+# fig_first_acf.savefig('acf1.png')
 
 
 # %%
 fig_first_pacf = plot_pacf(df["First Difference"].dropna())
-fig_first_pacf.savefig('pacf1.png')
+# fig_first_pacf.savefig('pacf1.png')
 
 
 # %%
 fig_seasonal_first_acf = plot_acf(df["Seasonal First Difference"].dropna())
-fig_seasonal_first_acf.savefig('acf2.png')
+# fig_seasonal_first_acf.savefig('acf2.png')
 
 
 # %%
 fig_seasonal_first_pacf = plot_pacf(df["Seasonal First Difference"].dropna())
-fig_seasonal_first_pacf.savefig('pacf2.png')
+# fig_seasonal_first_pacf.savefig('pacf2.png')
 
 
 # %%
@@ -193,7 +193,7 @@ results.resid.plot(kind='kde')
 # %%
 df['forecast'] = results.predict(start=150, end=167, dynamic=True)
 df[['Use', 'forecast']].plot(figsize=(12, 8))
-df[['Use', 'forecast']].plot(figsize=(12, 8)).get_figure().savefig('predictself.png')
+# df[['Use', 'forecast']].plot(figsize=(12, 8)).get_figure().savefig('predictself.png')
 
 
 # %%
@@ -215,4 +215,4 @@ future_df.head()
 future_df['forecast'] = results.predict(start=167, end=191, dynamic=True)
 future_df[['Use', 'forecast']].plot(figsize=(12, 8))
 future_df.tail(50)
-future_df[['Use', 'forecast']].plot(figsize=(12, 8)).get_figure().savefig('predictfuture.png')
+# future_df[['Use', 'forecast']].plot(figsize=(12, 8)).get_figure().savefig('predictfuture.png')
