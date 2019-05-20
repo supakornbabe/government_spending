@@ -921,7 +921,7 @@ text.highcharts-drilldown-data-label,
 } */
 .indexChart {
     min-width: 320px;
-    max-width: 800px;
+    max-width: 1500px;
     height: 400px;
     margin: 0 auto;
 
