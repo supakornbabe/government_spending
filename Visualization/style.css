@@ -899,7 +899,7 @@ text.highcharts-drilldown-data-label,
     stroke-width: 1px;
 }
 
-#budgetAndUsage {
+/* #budgetAndUsage {
     min-width: 310px;
     max-width: 800px;
     height: 400px;
@@ -918,6 +918,19 @@ text.highcharts-drilldown-data-label,
     max-width: 800px;
     height: 400px;
     margin: 0 auto;
+} */
+.indexChart {
+    min-width: 320px;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto;
+
+}
+
+.chart {
+    margin: 0 0 0 0;
+    width: 100%;
+    height: 100%;
 }
 
 .highcharts-pie-series .highcharts-point {
@@ -931,6 +944,26 @@ text.highcharts-drilldown-data-label,
     stroke-width: 2px;
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+#chartBox {
+    width: 100%;
+    height: 93%;
+    /* border: 3px solid green; */
+    /* text-align: center; */
+}
+
+#chartPieBox {
+    width: 100%;
+    height: 90%;
+    /* border: 3px solid green; */
+    /* text-align: center; */
+}
+
 #yearButton {
     margin: auto;
     width: 50%;
@@ -938,6 +971,11 @@ text.highcharts-drilldown-data-label,
     text-align: center;
 }
 
-#yearButton p{
+#yearButton p {
     display: inline
 }
+
+/* 
+.mdc-button--unelevated {
+    color: #000000
+} */

@@ -17,10 +17,9 @@
 </head>
 
 <body>
-    <div id="budgetAndUsage" class='indexChart'></div>
-    <p />
-    <div id="pie" class='indexChart'></div>
-    <p />
+    <div id="chartPieBox">
+        <div id="pie" class='chart'></div>
+    </div>
     <div id="yearButton">
         <p>เลือกปี: </p>
         <button id="changeTo2559" class="mdc-button mdc-button--outlined">2559</button>
@@ -28,11 +27,6 @@
         <button id="changeTo2561" class="mdc-button mdc-button--outlined">2561</button>
         <button id="changeTo2562" class="mdc-button mdc-button--outlined">2562</button>
     </div>
-    <p />
-    <div id="bar" class='indexChart'></div>
-    <br />
-    <br />
-    <br />
 
     <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.html">Stat</a>
@@ -42,13 +36,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="index.html">หน้าแรก</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="chart1.html">งบประมาณและผลรวมวงเงินเบิกจ่าย</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="chart2.html">ส่วนแบ่งงบประมาณของแต่ละกรม</a>
                 </li>
                 <li class="nav-item">

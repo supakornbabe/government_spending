@@ -2,6 +2,10 @@ $(function () {
     var line = new Highcharts.chart({
         chart: {
             renderTo: 'budgetAndUsage',
+            spacingBottom: 15,
+            spacingTop: 10,
+            spacingLeft: 10,
+            spacingRight: 10,
         },
         title: {
             /* Solar Employment Growth by Sector */
@@ -81,6 +85,10 @@ $(function () {
         chart: {
             styledMode: true,
             renderTo: 'pie',
+            spacingBottom: 15,
+            spacingTop: 10,
+            spacingLeft: 10,
+            spacingRight: 10,
             events: {
                 redraw: function () {
                     setTimeout(function () {
@@ -321,6 +329,10 @@ $(function () {
         chart: {
             type: 'column',
             renderTo: 'bar',
+            spacingBottom: 15,
+            spacingTop: 10,
+            spacingLeft: 10,
+            spacingRight: 10,
         },
         title: {
             text: 'งบประมาณของแต่ละกรมในกระทรวงมหาดไทยปี 2559-2562'
